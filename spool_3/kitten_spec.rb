@@ -30,7 +30,7 @@ describe Kitten do
     end
 
     it "returns false when fed a milk bowl" do
-      kitten.feed('milk bowl').should be_true
+      kitten.feed('milk bowl').should be_false
     end
 
     it "returns false when fed fish and chips" do

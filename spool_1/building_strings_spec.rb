@@ -128,7 +128,7 @@ world!"
     it "leaves the original strings unmodified" do
       duck = "duck"
       goose = "goose"
-      [duck, duck, goose],join(", ")
+      [duck, duck, goose].join(", ")
       duck.should eq __
     end
   end
