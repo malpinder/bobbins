@@ -102,17 +102,25 @@ describe "Conditionals" do
   end
 
   describe "if... elsif.. else... end" do
-    def appropriate(givers)
-      if givers.include?("Sam")
-        3
-      elsif givers.include?("Chris")
-        1
+    def message(occasion)
+      if occasion == "birthday"
+        "Happy birthday!"
+      elsif occasion == "illness"
+        "Get well soon"
+      else
+        "Congratulations!"
       end
     end
 
-    it "runs what's inside the first part if the first conditional is true"
-    it "runs what's in the second part if the second conditional is true"
-    it "runs what's in the third part if the both conditionals are false"
+    it "runs what's inside the first part if the first conditional is true" do
+      message("birthday").should eq __
+    end
+    it "runs what's in the second part if the second conditional is true" do
+      message("illness").should eq __
+    end
+    it "runs what's in the third part if the both conditionals are false" do
+      message(__).should eq "Congratulations!"
+    end
   end
 
   describe "unless... end" do
