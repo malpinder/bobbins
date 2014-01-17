@@ -63,6 +63,16 @@ describe "Getting started with RSpec" do
 
   describe "within a deeper context" do
 
+    # 'let' blocks will give you a variable you can use in the tests.
+    # Any test in the same describe as the 'let' will have access to it.
+    # In this case, it's like writing a_number = 5 at the start of each test.
+
+    let(:a_number) { 1 }
+
+    it "has access to 'let' blocks" do
+      a_number.should eq __
+    end
+
     # Sometimes you will have to edit the test.
     # Sometimes you will have to edit a method the test is calling.
     # Sometimes you will have to write out the methods from scratch.

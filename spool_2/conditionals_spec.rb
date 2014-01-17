@@ -89,9 +89,12 @@ describe "Conditionals" do
     end
 
     it "does not run what's in the second part if the first part is true, even if the second conditional is also true" do
-      givers = ["Chris", "Sam", "Clare"]
-      number_of_presents = calculate_presents_given(givers)
-      number_of_presents.should eq __
+      if 1 == 1
+        result = "All fine"
+      else
+        raise "The universe isn't right any more"
+      end
+      result.should eq __
     end
 
     it "doesn't do anything if they are both false" do
