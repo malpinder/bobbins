@@ -1,30 +1,29 @@
 require './spec_helper'
 
-
-# An 'it' block states what it will test, then runs some code.
-# In these tests, this takes the form of taking a thing, and saying it
-# should be a certain way.
-
-# Replace the __ with something that makes the test pass.
-
-it "can check a thing is equal to another" do
-  number = __
-  number.should eq 1
-end
-
-# Each 'it' block runs as a separate test.
-# Something you set in the first test will not continue over into the second.
-
-it "can check different things" do
-  number = __
-  number.should eq 2
-end
-
 # A describe block groups together tests that are alike in some way.
 # It can help provide context for people reading the spec file.
 # All the tests in it still run independently.
 
 describe "Getting started with RSpec" do
+
+  # An 'it' block states what it will test, then runs some code.
+  # In these tests, this takes the form of taking a thing, and saying it
+  # should be a certain way.
+
+  # Replace the __ with something that makes the test pass.
+
+  it "can check a thing is equal to another" do
+    number = __
+    number.should eq 1
+  end
+
+  # Each 'it' block runs as a separate test.
+  # Something you set in the first test will not continue over into the second.
+
+  it "can check different things" do
+    number = __
+    number.should eq 2
+  end
 
   # You can test that a thing should be a certain way.
   # You can also test that a thing should not be a certain way.
