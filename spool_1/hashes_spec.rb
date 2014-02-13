@@ -27,7 +27,7 @@ describe "Hashes" do
   describe "accessing hashes" do
     it "can be done with square brackets and a key" do
       hash = { one: "uno", two: "dos" }
-      hash[:uno].should eq __
+      hash[:one].should eq __
     end
 
     it "will return nil for keys that don't exist" do
