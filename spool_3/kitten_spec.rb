@@ -1,7 +1,7 @@
 require './spec_helper'
 
 class Kitten
-  __
+  # __
 end
 
 describe Kitten do
