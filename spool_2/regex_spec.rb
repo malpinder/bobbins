@@ -45,7 +45,7 @@ describe "Regular Expressions (Regex or Regexp)" do
     phrase.should =~ /[zm__]n/
   end
   it "can match a single character from a range" do
-    "striking 13".should =~ /[2-7]/
+    "striking 13".should =~ /[__-__]/
   end
 
   it "can match any digit with \d" do
@@ -61,11 +61,11 @@ describe "Regular Expressions (Regex or Regexp)" do
     phrase.should =~ /__I/
   end
   it "can match the end of the string with \z" do
-    phrase.should =~ /thirteen__/
+    phrase.should =~ /thirteen\.__/
   end
 
-  it "can check for something that is not using ^" do
-    phrase.should =~ /[^__]triking/
+  it "can check for something that is not using [^chars]" do
+    phrase.should =~ /__triking/
   end
   # What happens if you use a caret (^) outside square brackets?
 
