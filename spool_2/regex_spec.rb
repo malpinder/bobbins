@@ -65,7 +65,7 @@ describe "Regular Expressions (Regex or Regexp)" do
   end
 
   it "can check for something that is not using [^chars]" do
-    phrase.should =~ /[^a-rt-z]__triking/
+    phrase.should =~ /[^a-rt-z]__/
   end
   # What happens if you use a caret (^) outside square brackets?
 
