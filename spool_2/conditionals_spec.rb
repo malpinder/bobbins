@@ -137,7 +137,7 @@ describe "Conditionals" do
     end
   end
 
-  describe "unless... else... end"
+  describe "unless... else... end" do
     it "can be used (but don't, because it makes brains hurt)" do
       direction = "left"
       facing_north = __
