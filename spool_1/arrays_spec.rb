@@ -14,7 +14,7 @@ describe "Arrays" do
     end
 
     it "can be done using word array shorthand" do
-      array = %w{ one two three }
+      array = %w{one two three}
       expect(array).to eq [ __ ]
     end
   end
@@ -66,7 +66,7 @@ describe "Arrays" do
 
     it "can be reversed" do
       array = __
-      expect(array.reverse).to eq [2,5,10,9]
+      expect(array.reverse).to eq [2, 5, 10, 9]
     end
 
     it "can be sorted" do
@@ -81,13 +81,13 @@ describe "Arrays" do
     end
 
     it "can delete at a certain index" do
-      array = %w{ fee fi fo fum }
+      array = %w{fee fi fo fum}
       array.delete_at(3)
       expect(array).to eq __
     end
 
     it "can get rid of duplicated values" do
-      array = %w{ hi ho hi ho off to work we go }
+      array = %w{hi ho hi ho off to work we go}
       array.uniq!
       expect(array).to eq __
     end
