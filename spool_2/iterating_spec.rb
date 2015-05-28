@@ -11,7 +11,7 @@ describe "Iterating" do
         string = string + " Echo!"
       end
 
-      string.should eq "Echo! Echo! Echo!"
+      expect(string).to eq "Echo! Echo! Echo!"
     end
 
     it "can be done with a do... end" do
@@ -21,13 +21,13 @@ describe "Iterating" do
         x += 1
       end
 
-      x.should eq __
+      expect(x).to eq __
     end
 
     it "can be done with curly braces" do
       x = 1
       5.times { x += 1 }
-      x.should eq __
+      expect(x).to eq __
     end
 
     it "can use an argument in the block (which in this case is a number)" do
@@ -35,13 +35,13 @@ describe "Iterating" do
       5.times do |number|
         string << __
       end
-      string.should eq "I can count: 1 2 3 4 5"
+      expect(string).to eq "I can count: 1 2 3 4 5"
     end
 
     it "returns the number of times it did it" do
       x = 1
       result = 5.times { x += 1 }
-      result.should eq __
+      expect(result).to eq __
     end
 
     # This isn't the first time you've encountered blocks.
@@ -59,12 +59,12 @@ describe "Iterating" do
         array.each do |animal|
           what_got_passed_to_the_block.push animal
         end
-        what_got_passed_to_the_block.should eq __
+        expect(what_got_passed_to_the_block).to eq __
       end
 
       it "returns the array when it is done" do
         result = array.each { |animal| animal.reverse }
-        result.should eq __
+        expect(result).to eq __
       end
 
     end
@@ -76,7 +76,7 @@ describe "Iterating" do
         array.each_with_index do |animal, i|
           farmyard << __
         end
-        farmyard.should eq "The farmyard contains: 0 goats 1 sheep 2 cows 3 hens"
+        expect(farmyard).to eq "The farmyard contains: 0 goats 1 sheep 2 cows 3 hens"
       end
 
     end
@@ -88,7 +88,7 @@ describe "Iterating" do
       (5..10).each do |number|
         what_got_passed_to_the_block << number
       end
-      what_got_passed_to_the_block.should eq __
+      expect(what_got_passed_to_the_block).to eq __
     end
   end
 
@@ -103,12 +103,12 @@ describe "Iterating" do
           what_got_passed_to_the_block << key
           what_got_passed_to_the_block << value
         end
-        what_got_passed_to_the_block.should eq __
+        expect(what_got_passed_to_the_block).to eq __
       end
 
       it "returns the hash when it is done" do
         result = hash.each_pair { |key, value| value.reverse }
-        result.should eq __
+        expect(result).to eq __
       end
 
     end
@@ -120,7 +120,7 @@ describe "Iterating" do
         hash.each do |array|
           keys_and_values += "#{array} "
         end
-        keys_and_values.should eq __
+        expect(keys_and_values).to eq __
       end
 
       it "can separate keys and values by using brackets" do
@@ -128,7 +128,7 @@ describe "Iterating" do
         hash.each do |(key, value)|
           keys_and_values += "Key: #{key}, Value: #{value} "
         end
-        keys_and_values.should eq __
+        expect(keys_and_values).to eq __
       end
 
     end
@@ -140,7 +140,7 @@ describe "Iterating" do
         hash.each_with_index do |(key, value), index|
           new_hash[index] = "#{key} #{value}"
         end
-        new_hash.should eq __
+        expect(new_hash).to eq __
       end
 
     end
