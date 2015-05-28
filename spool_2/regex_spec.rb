@@ -12,11 +12,10 @@ describe "Regular Expressions (Regex or Regexp)" do
     expect(/April/.__(phrase)).to be_truthy
   end
 
-  # What's the difference between using match and .match?
-
   it "can match any character" do
     expect(__).to match /a/
   end
+
   it "can match a combination of characters" do
     expect(__).to match /abc/
   end
@@ -24,12 +23,15 @@ describe "Regular Expressions (Regex or Regexp)" do
   it "matches an optional character with ?" do
     expect(phrase).to match /__?ing/
   end
+
   it "matches one or more of a character with +" do
     expect(phrase).to match /t__+n/
   end
+
   it "matches zero or more of a character with *" do
     expect(phrase).to match /was__*/
   end
+
   it "matches any single non-newline character with ." do
     expect(phrase).to match /__.__/
   end
@@ -45,6 +47,7 @@ describe "Regular Expressions (Regex or Regexp)" do
   it "can match a single character from a set" do
     expect(phrase).to match /[zm__]n/
   end
+
   it "can match a single character from a range" do
     expect("striking 13").to match /[__-__]/
   end
@@ -52,15 +55,19 @@ describe "Regular Expressions (Regex or Regexp)" do
   it "can match any digit with \d" do
     expect("striking 13").to match /__/
   end
+
   it "can match any whitespace with \s" do
     expect(phrase).to match /cold__day/
   end
+
   it "can match word characters with \w" do
     expect(phrase).to match /__,/
   end
+
   it "can match the start of the string with \A" do
     expect(phrase).to match /__I/
   end
+
   it "can match the end of the string with \z" do
     expect(phrase).to match /thirteen\.__/
   end
