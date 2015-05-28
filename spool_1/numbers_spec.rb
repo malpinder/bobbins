@@ -19,7 +19,7 @@ describe "Numbers" do
     end
     it "can be a negative number" do
       integer = __
-      expect(integer).to < 0
+      expect(integer < 0).to eq true
     end
   end
 
@@ -30,7 +30,7 @@ describe "Numbers" do
     end
     it "can be smaller than 1" do
       float = __
-      expect(float).to < 1
+      expect(float < 1).to eq true
     end
     it "can be a float which represents a whole number" do
       float = __
