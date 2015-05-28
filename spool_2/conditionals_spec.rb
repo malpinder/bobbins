@@ -11,7 +11,7 @@ describe "Conditionals" do
         clothing << "hat"
       end
 
-      clothing.should eq __
+      expect(clothing).to eq __
     end
 
     it "does not run what's inside if the conditional is false" do
@@ -22,7 +22,7 @@ describe "Conditionals" do
         clothing << "raincoat"
       end
 
-      clothing.should eq []
+      expect(clothing).to eq []
     end
 
     it "can be written at the end of the line" do
@@ -31,7 +31,7 @@ describe "Conditionals" do
 
       clothing << __ if status == :rainy
 
-      clothing.should eq ["wellingtons"]
+      expect(clothing).to eq ["wellingtons"]
     end
 
     it "does not run any of the line if the end-line conditional is false" do
@@ -39,7 +39,7 @@ describe "Conditionals" do
 
       backwards_fish = fish.reverse! if fish == "halibut"
 
-      [backwards_fish, fish].should eq __
+      expect([backwards_fish, fish]).to eq __
     end
   end
 
@@ -52,7 +52,7 @@ describe "Conditionals" do
       else
         prize = nil
       end
-      prize.should eq :fluffy_unicorn
+      expect(prize).to eq :fluffy_unicorn
     end
 
     it "runs what's in the second part if the conditional is false" do
@@ -63,7 +63,7 @@ describe "Conditionals" do
       else
         prize = nil
       end
-      prize.should eq nil
+      expect(prize).to eq nil
     end
   end
 
@@ -79,13 +79,13 @@ describe "Conditionals" do
     it "runs what's inside the first part if the conditional is true" do
       givers = ["Sam", "Finn"]
       number_of_presents = calculate_presents_given(givers)
-      number_of_presents.should eq __
+      expect(number_of_presents).to eq __
     end
 
     it "runs what's in the second part if the first conditional is false and the second conditional is true" do
       givers = [ "Maude", __ ]
       number_of_presents = calculate_presents_given(givers)
-      number_of_presents.should eq __
+      expect(number_of_presents).to eq __
     end
 
     it "does not run what's in the second part if the first part is true, even if the second conditional is also true" do
@@ -94,13 +94,13 @@ describe "Conditionals" do
       else
         raise "The universe isn't right any more"
       end
-      result.should eq __
+      expect(result).to eq __
     end
 
     it "doesn't do anything if they are both false" do
       givers = __
       number_of_presents = calculate_presents_given(givers)
-      number_of_presents.should eq __
+      expect(number_of_presents).to eq __
     end
   end
 
@@ -116,13 +116,13 @@ describe "Conditionals" do
     end
 
     it "runs what's inside the first part if the first conditional is true" do
-      message("birthday").should eq __
+      expect(message("birthday")).to eq __
     end
     it "runs what's in the second part if the second conditional is true" do
-      message("illness").should eq __
+      expect(message("illness")).to eq __
     end
     it "runs what's in the third part if the both conditionals are false" do
-      message(__).should eq "Congratulations!"
+      expect(message(__)).to eq "Congratulations!"
     end
   end
 
@@ -133,7 +133,7 @@ describe "Conditionals" do
         word = "down"
       end
 
-      word.should eq "down"
+      expect(word).to eq "down"
     end
   end
 
@@ -148,7 +148,7 @@ describe "Conditionals" do
         direction = "west"
       end
 
-      direction.should eq "west"
+      expect(direction).to eq "west"
     end
 
     # Can you re-write this unless... else statement so that the logic remains
@@ -158,7 +158,7 @@ describe "Conditionals" do
   describe "inline if / else (ternary operators)" do
     it "uses ? and :, without an end" do
       result = (__ ? :rain : :shine)
-      result.should eq :rain
+      expect(result).to eq :rain
     end
   end
 
