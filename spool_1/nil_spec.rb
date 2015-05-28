@@ -9,7 +9,7 @@ describe 'Nil' do
     end
 
     it "is falsy" do
-      expect(__).to be_false
+      expect(__).to be_falsey
     end
   end
 

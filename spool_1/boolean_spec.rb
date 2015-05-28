@@ -18,34 +18,34 @@ describe "Booleans" do
 
   describe "falsiness" do
     it "is false for false" do
-      expect(__).to be_false
+      expect(__).to be_falsey
     end
     it "is false for nil" do
-      expect(__).to be_false
+      expect(__).to be_falsey
     end
   end
 
   describe "truthiness" do
     it "is true for true object" do
-      expect(__).to be_true
+      expect(__).to be_truthy
     end
     it "is true for numbers" do
-      expect(__).to be_true
+      expect(__).to be_truthy
     end
     it "is true for strings" do
-      expect(__).to be_true
+      expect(__).to be_truthy
     end
     it "is true even for empty strings" do
-      expect(__).to be_true
+      expect(__).to be_truthy
     end
     it "is true for a hash" do
-      expect(__).to be_true
+      expect(__).to be_truthy
     end
     it "is true for an array" do
-      expect(__).to be_true
+      expect(__).to be_truthy
     end
     it "is true for pretty much anything else" do
-      expect(__).to be_true
+      expect(__).to be_truthy
     end
   end
 end
