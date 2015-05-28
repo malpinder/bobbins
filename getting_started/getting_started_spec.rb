@@ -36,7 +36,7 @@ describe "Getting started with RSpec" do
   # You may need to use round brackets to make things clearer.
 
   it "can check if things equal an expression" do
-    expect(__).not_to eq 1 + 1
+    expect(__).to eq 1 + 1
   end
 
   # You can also test the behaviour of a thing rather than the thing itself.
