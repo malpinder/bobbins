@@ -18,31 +18,31 @@ describe Kitten do
 
   describe "feed" do
     it "returns true when fed ketchup on fish" do
-      expect(kitten.feed('ketchup on fish')).to be_truthy
+      expect(kitten.feed('ketchup on fish')).to eq true
     end
 
     it "returns true when fed chicken ragu" do
-      expect(kitten.feed('chicken ragu')).to be_truthy
+      expect(kitten.feed('chicken ragu')).to eq true
     end
 
     it "returns true when fed a milk jug" do
-      expect(kitten.feed('milk jug')).to be_truthy
+      expect(kitten.feed('milk jug')).to eq true
     end
 
     it "returns false when fed a milk bowl" do
-      expect(kitten.feed('milk bowl')).to be_falsey
+      expect(kitten.feed('milk bowl')).to eq false
     end
 
     it "returns false when fed fish and chips" do
-      expect(kitten.feed('fish and chips')).to be_falsey
+      expect(kitten.feed('fish and chips')).to eq false
     end
 
     it "returns false when fed fish" do
-      expect(kitten.feed('fish')).to be_falsey
+      expect(kitten.feed('fish')).to eq false
     end
 
     it "returns false when fed ketchup" do
-      expect(kitten.feed('ketchup')).to be_falsey
+      expect(kitten.feed('ketchup')).to eq false
     end
 
     # Bonus points if you work out a pattern and build a general solution.
