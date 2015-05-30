@@ -41,7 +41,7 @@ describe "Regular Expressions (Regex or Regexp)" do
   end
 
   it "matches the left-most match first" do
-    expect(phrase match /th*/).to eq __
+    expect(phrase[/th*/]).to eq __
   end
 
   it "can match a single character from a set" do
