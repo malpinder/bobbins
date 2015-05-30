@@ -17,34 +17,34 @@ describe "Booleans" do
   end
 
   describe "falsiness" do
-    it "is false for false" do
+    it "is falsey for false" do
       expect(__).to be_falsey
     end
-    it "is false for nil" do
+    it "is falsey for nil" do
       expect(__).to be_falsey
     end
   end
 
   describe "truthiness" do
-    it "is true for true object" do
+    it "is truthy for true object" do
       expect(__).to be_truthy
     end
-    it "is true for numbers" do
+    it "is truthy for numbers" do
       expect(__).to be_truthy
     end
-    it "is true for strings" do
+    it "is truthy for strings" do
       expect(__).to be_truthy
     end
-    it "is true even for empty strings" do
+    it "is truthy even for empty strings" do
       expect(__).to be_truthy
     end
-    it "is true for a hash" do
+    it "is truthy for a hash" do
       expect(__).to be_truthy
     end
-    it "is true for an array" do
+    it "is truthy for an array" do
       expect(__).to be_truthy
     end
-    it "is true for pretty much anything else" do
+    it "is truthy for pretty much anything else" do
       expect(__).to be_truthy
     end
   end
@@ -52,12 +52,12 @@ end
 
 describe "Boolean expressions" do
   describe "&&" do
-    it "returns what is on the left if it is false" do
+    it "returns what is on the left if it is falsey" do
       result = false && "A prize!"
       expect(result).to eq __
     end
 
-    it "returns what is on the right if what is on the left is true" do
+    it "returns what is on the right if what is on the left is truthy" do
       result = true && "A prize!"
       expect(result).to eq __
     end
@@ -69,12 +69,12 @@ describe "Boolean expressions" do
   end
 
   describe "||" do
-    it "returns what is on the left if it is true" do
+    it "returns what is on the left if it is truthy" do
       result = true || "A prize!"
       expect(result).to eq __
     end
 
-    it "returns what is on the right if what is on the left is false" do
+    it "returns what is on the right if what is on the left is falsey" do
       result = false || "A prize!"
       expect(result).to eq __
     end
